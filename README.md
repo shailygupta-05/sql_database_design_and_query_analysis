@@ -67,6 +67,7 @@ Three tables were designed in a relational model:
    - Connected with Books and Customers tables
     
 ### Relational Model Implemented
+![image alt](https://github.com/shailygupta-05/sql_database_design_and_query_analysis/blob/2ba9732489933cfd9868502f4de442596380af13/image/establishing%20relationship.png)
    - Books → Parent Table (Dimension)  
    - Customers → Parent Table (Dimension)  
    - Orders → Child Table (Fact Table)
