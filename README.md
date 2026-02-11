@@ -1,91 +1,141 @@
-#  SQL Database Design & Query Analysis – Online Bookstore
+#  ONLINE BOOKSTORE ANALYSIS | SQL PROJECT
 
-##  Objective
-To design a relational database for an online bookstore, establish table relationships using Primary Key and Foreign Key constraints, and perform business analysis using SQL queries.
+##  OBJECTIVE
+To design a structured relational database for an online bookstore, establish Primary Key–Foreign Key relationships, and perform business analysis using SQL queries from basic to advanced levels.
 
-##  Project Overview
-This project demonstrates core SQL concepts including:
-- Creating relational database tables  
-- Implementing Parent–Child table relationships  
-- Designing Fact and Dimension tables  
-- Importing CSV data into SQL  
-- Writing Basic and Advanced SQL queries  
+## 📌 TABLE OF CONTENTS
 
-##  Dataset
-Three CSV files were used:
-- Books.csv – Book details  
-- Customers.csv – Customer information  
-- Orders.csv – Transaction records  
+- [Project Overview](#project-overview)
+- [Problem Statement](#problem-statement)
+- [Dataset](#dataset)
+- [Tools & Technologies](#tools--technologies)
+- [Database Design & Relationships](#database-design--relationships)
+- [Steps Performed](#steps-performed)
+- [SQL Analysis Performed](#sql-analysis-performed)
+- [Key Learnings](#key-learnings)
+- [How to Run This Project](#how-to-run-this-project)
+- [Author & Contact](#author--contact)
 
-##  Tools Used
+---
+
+##  PROJECT OVERVIEW
+This project demonstrates end-to-end database creation and analysis for an Online Bookstore system.  
+The main focus of this project is:
+- Designing relational database tables  
+- Establishing Primary Key – Foreign Key relationships
+-  Creating structured schema 
+- Designing Parent–Child table structure   
+ - Importing CSV data into SQL  
+- Performing SQL-based business analysis  
+
+##  PROBLEM STATEMENT
+
+In an online bookstore system, data is stored across multiple tables such as: - Books  Table , Customers Table , Orders Table
+- Without proper relationships and structure, it becomes difficult to:
+    - Track customer purchases  
+    - Analyze sales performance
+    - Generate revenue reports  
+    - Maintain data integrity  
+
+This project solves these problems by building a relational SQL database and analyzing it through structured queries.
+
+##  DATASET
+
+Three CSV files were used in this project::
+- Books.csv – book information  
+- Customers.csv – customer details  
+- Orders.csv – transaction records
+ 
+These datasets represent a typical e-commerce database structure.
+
+ ##  TOOLS & TECHNOLOGIES
 - MySQL  
 - SQL Queries  
 - Relational Database Concepts  
-- MySQL Import Wizard
+- MySQL Import Wizard  
 
-## Database Design
-### Tables Created
+
+## DATABASE DESIGN & RELATIONSHIPS
+## Tables Implemented
 Three tables were designed in a relational model:
-1. Books Table (Parent Table – Dimension)
-- Primary Key: Book_ID  
+1. Books Table – Parent Table  
+   - Stores book details (title, author, price, genre, etc.)
+2. Customers Table – Parent Table  
+   - Stores customer information (name, email, location, etc.)
+3. Orders Table – Child Table  
+   - Stores transaction details  
+   - Connected with Books and Customers tables
+    
+### Relational Model Implemented
+   - Books → Parent Table (Dimension)  
+   - Customers → Parent Table (Dimension)  
+   - Orders → Child Table (Fact Table)
 
-2. Customers Table (Parent Table – Dimension)
-- Primary Key: Customer_ID  
+### Keys Used
+  - Primary Keys
+        - Books → Book_ID  
+        - Customers → Customer_ID  
+        - Orders → Order_ID  
 
-3. Orders Table (Child Table – Fact)
-- Primary Key: Order_ID  
-- Foreign Keys:  
-  - Customer_ID → Customers  
-  - Book_ID → Books  
+- Foreign Keys in Orders Table
+    - Customer_ID → references Customers table  
+    - Book_ID → references Books table  
 
-### Relationships Implemented
+### Relationships Established
+- Books → Orders : One-to-Many  
+- Customers → Orders : One-to-Many  
 
-- Books → Orders (One-to-Many)  
-- Customers → Orders (One-to-Many)  
+This design ensures:
+   - Referential integrity  
+   - Structured relational mapping  
+   - Fact–Dimension modeling  
 
-This structure follows a Fact–Dimension Model ensuring referential integrity.
+##  STEPS PERFORMED
+1. Designed database schema  
+2. Created three tables using SQL  
+3. Defined Primary Keys  
+4. Established Foreign Key constraints  
+5. Imported CSV data using Import Wizard  
+6. Loaded real-world data into tables  
+7. Executed SQL queries  
+8. Performed business analysis  
 
-##  Steps Performed
+##  SQL ANALYSIS PERFORMED
+  ### Concepts Covered
+Basic SQL:
+- Data selection and filtering  
+- Sorting and ordering  
+- Aggregations  
+- Simple joins  
 
-1. Created database tables using SQL `CREATE TABLE` commands  
-2. Defined:
-   - Primary Keys  
-   - Foreign Keys  
-   - Data Types  
-3. Established relationships between tables  
-4. Imported CSV files using Import Wizard  
-5. Executed:
-   - 11 Basic SQL Queries  
-   - 9 Advanced SQL Queries  
-6. Analyzed:
-   - Sales data  
-   - Customer behavior  
-   - Revenue insights 
+Advanced SQL:
+- Multi-table JOIN operations  
+- GROUP BY and HAVING  
+- Subqueries  
+- Complex analytical queries  
 
-##  SQL Concepts Demonstrated
-
-- Database Schema Design
--  Normalization  
-- Primary Key & Foreign Key Constraints  
-- Table Relationships  
-- Joins and Aggregations  
-- Filtering and Grouping  
-- Analytical SQL Queries  
-
-##  Conclusion
-
-This project showcases practical SQL skills in:
-
+##  KEY LEARNINGS
+This project strengthened core SQL skills including:
 - Relational database design  
-- Table creation and relationships  
-- Data import  
-- Query-based business analysis  
+- Primary Key & Foreign Key usage  
+- Parent–Child table relationships  
+- Fact and Dimension modeling  
+- CSV data import into SQL  
+- Writing structured SQL queries  
+- Business analysis using SQL  
 
-It serves as a strong foundation project for SQL and database management.
+##  HOW TO RUN THIS PROJECT
 
-##  Author
+- Download or clone the repository  
+- Open MySQL Workbench  
+- Execute SQL scripts to create tables  
+- Import CSV files using Import Wizard  
+- Run provided SQL queries for analysis  
 
-**Name:** Shaily Gupta  
-**Email:** shailygupta2529@gmail.com  
-**LinkedIn:** https://www.linkedin.com/in/shailygupta05  
+##  AUTHOR & CONTACT
 
+Name: Shaily Gupta  
+Email: shailygupta2529@gmail.com  
+LinkedIn: https://www.linkedin.com/in/shailygupta05  
+
+###  THANK YOU FOR VISITING THIS PROJECT!
